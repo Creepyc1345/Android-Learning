@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">UIChallenge</string>
+    
+    <array name="Countries">
+        <item>Choose one</item>
+        <item>Germany</item>
+        <item>Austria</item>
+        <item>Switzerland</item>
+        <item>Netherlands</item>
+        <item>France</item>
+        <item>Belgium</item>
+        <item>Poland</item>
+        <item>Denmark</item>
+        <item>Luxburg</item>
+        <item>Czech Republic</item>
+    </array>
+</resources>
