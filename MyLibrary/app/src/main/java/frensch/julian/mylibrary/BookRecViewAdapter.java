@@ -37,8 +37,18 @@ public class BookRecViewAdapter extends  RecyclerView.Adapter<BookRecViewAdapter
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Log.d(TAG, "onBindViewHolder: Called");
+        //holder.txtName.setText("Test");
+        holder.txtName.setText(books.get(position).getName());
+        Glide.with(mContext).asBitmap().load(books.get(position).getImageUrl()).into(holder.imgBook);
+
+        holder.parent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext,books.get(position).getName() + " selected",Toast.LENGTH_SHORT).show();
+            }
+        });
 //        holder.txtName.setText(books.get(position).getName());
 //        Glide.with(mContext)
 //                .asBitmap()
@@ -71,7 +81,7 @@ public class BookRecViewAdapter extends  RecyclerView.Adapter<BookRecViewAdapter
             super(itemView);
             parent = itemView.findViewById(R.id.parent);
             imgBook = itemView.findViewById(R.id.imgBook);
-            txtName = itemView.findViewById(R.id.txtName);
+            txtName = itemView.findViewById(R.id.txtBookName);
         }
     }
 }
