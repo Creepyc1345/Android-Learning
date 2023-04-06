@@ -133,7 +133,7 @@ public class BookActivity extends AppCompatActivity {
         }
     }
     private void handleCurrentlyReading(final Book book) {
-        ArrayList<Book> currentlyReadingBooks = Utils.getCurrentlyReading();
+        ArrayList<Book> currentlyReadingBooks = Utils.getInstance().getCurrentlyReading();
 
         boolean existInCurrentlyReading = false;
 
@@ -161,7 +161,7 @@ public class BookActivity extends AppCompatActivity {
         }
     }
     private void handleFavourite(final Book book) {
-        ArrayList<Book> favouriteBooks = Utils.getFavouriteBooks();
+        ArrayList<Book> favouriteBooks = Utils.getInstance().getFavouriteBooks();
 
         boolean existInFavourite = false;
 

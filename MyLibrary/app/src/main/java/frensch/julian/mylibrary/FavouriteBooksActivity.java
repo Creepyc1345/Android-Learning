@@ -15,11 +15,11 @@ public class FavouriteBooksActivity extends AppCompatActivity {
         setContentView(R.layout.activity_favourite_books);
 
         RecyclerView recyclerView = findViewById(R.id.bookRecView);
-        BookRecViewAdapter adapter = new BookRecViewAdapter(this);
+        BookRecViewAdapter adapter = new BookRecViewAdapter(this,"favourite");
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter.setBooks(Utils.getFavouriteBooks());
+        adapter.setBooks(Utils.getInstance().getFavouriteBooks());
     }
 
     @Override
