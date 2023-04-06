@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        Utils.getInstance(); // Calls Constructor and initializes class
+        Utils.getInstance(this); // Calls Constructor and initializes class
     }
 
     private void initViews() {

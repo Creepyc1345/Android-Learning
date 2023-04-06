@@ -19,7 +19,7 @@ public class CurrentlyReadingBookActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter.setBooks(Utils.getInstance().getCurrentlyReading());
+        adapter.setBooks(Utils.getInstance(this).getCurrentlyReading());
     }
 
     @Override
